@@ -9,10 +9,45 @@ import abPositive from '../../../assets/images/ab+.png'
 import abNegative from '../../../assets/images/ab-.png'
 import oPositive from '../../../assets/images/o+.png'
 import oNegative from '../../../assets/images/o-.png'
-const FindDonor = () => { 
+import { useNavigate } from 'react-router-dom';
+const FindDonor = () => {  
+    const navigate=useNavigate()
     const goApositive=()=>{
-            alert("ok jaitase ")
+    
+            navigate('./a+')
     }
+    const goAnagetive=()=>{
+    
+            navigate('./a-')
+    }
+    const goBpositive=()=>{
+    
+            navigate('./b+')
+    }
+    const goBnagetive=()=>{
+    
+            navigate('./b-')
+    }
+   
+    const goaBpositive=()=>{
+    
+            navigate('./ab+')
+    }
+    const goaBnagetive=()=>{
+    
+            navigate('./ab-')
+    }
+    const goOpositive=()=>{
+    
+            navigate('./o+')
+    }
+    const goOnagetive=()=>{
+    
+            navigate('./o-')
+    }
+   
+ 
+   
     return ( 
        
         <div>
@@ -21,25 +56,25 @@ const FindDonor = () => {
                 <div className="group" onClick={goApositive}>
                     <img src={aPositive} alt="" />
                 </div>
-                <div className="group">
+                <div className="group" onClick={goAnagetive}>
                     <img src={aNegative} alt="" />
                 </div>
-                <div className="group">
+                <div className="group" onClick={goBpositive}>
                     <img src={bPositive} alt="" />
                 </div>
-                <div className="group">
+                <div className="group" onClick={goBnagetive}>
                     <img src={bNegative} alt="" />
                 </div>
-                <div className="group">
+                <div className="group" onClick={goaBpositive}>
                     <img src={abPositive} alt="" />
                 </div>
-                <div className="group">
+                <div className="group" onClick={goaBnagetive}>
                     <img src={abNegative} alt="" />
                 </div>
-                <div className="group">
+                <div className="group" onClick={goOpositive}>
                     <img src={oPositive} alt="" />
                 </div>
-                <div className="group">
+                <div className="group" onClick={goOnagetive}>
                     <img src={oNegative} alt="" />
                 </div>
              </div>
