@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // import HeadderBar from '../../HeaderBar/HeaderBar'
 import HeaderBar from '../../HeaderBar/HeaderBar';
+import Donor from './Donor'; 
+import './DonorList.css'
 
 const DonorsList = () => { 
     const a=20
@@ -12,14 +14,17 @@ useEffect(()=>{
   
    fetch(url)
    .then(res=>res.json())
-   .then(data=>setDonors(donors))
+   .then(data=>setDonors(data)) 
 },[])
 
     return (
         <div>
            <HeaderBar/>
              <div className="list-container">
-                 {group.length}
+                 {donors.length} 
+                 {
+                     donors.map(donor=><Donor key={donor._id} donor={donor}/>)
+                 }
              </div>
         </div>
     );

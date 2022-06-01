@@ -1,0 +1,11 @@
+.donor{
+    border: 1px solid gray;
+    margin-top: 10px; 
+    border-radius: 10px;
+    padding: 10px;
+
+} 
+.donor div{
+    display: flex;
+    justify-content: space-between;
+}
