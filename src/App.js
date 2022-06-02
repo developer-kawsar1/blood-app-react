@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import DonorsList from './components/Pages/donorsList/DonorsList';
 import FindDonor from './components/Pages/FindDonor/FindDonor';
 import Home from './components/Pages/Home/Home';
+import Loader from './components/Pages/Loader/Loader';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
  
  <Routes> 
         
-        <Route path="/" element={<Home />} />
+        
+        <Route path="/" element={<Home/>} /> 
         <Route path="/find-donor" element={<FindDonor />} /> 
         <Route path="/find-donor/:group" element={<DonorsList/>} /> 
         {/* <Route path="about" element={<About />} /> */}
